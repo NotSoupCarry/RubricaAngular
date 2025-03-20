@@ -1,1 +1,31 @@
-<p>contacts-list works!</p>
+<div class="container">
+    <h2>Rubrica Contatti</h2>
+  
+    <!-- Form per aggiungere un nuovo contatto -->
+    <div class="form">
+      <input [(ngModel)]="newContact.name" placeholder="Nome" required type="text"/>
+      <input [(ngModel)]="newContact.phone" placeholder="Telefono" required type="number"/>
+      <input [(ngModel)]="newContact.extra" placeholder="informazioni aggiuntive" type="extra"/>
+      <button (click)="addContact()">Aggiungi Contatto</button>
+      <p class="errorMessage">{{errorMessage}}</p>
+    </div>
+    
+    <!-- Lista contatti -->
+    <ul>
+      <li *ngFor="let contact of contacts; let i = index">
+        <ul>
+            <li>
+                {{ contact.name }}
+            </li>
+            <li>
+                {{ contact.phone }}
+            </li>
+            <li>
+                {{ contact.extra }}
+            </li>
+        </ul>
+        <button (click)="removeContact(i)">Rimuovi</button>
+      </li>
+    </ul>
+  </div>
+  
