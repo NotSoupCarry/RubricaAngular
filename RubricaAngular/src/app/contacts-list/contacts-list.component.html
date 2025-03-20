@@ -5,7 +5,7 @@
     <div class="form">
       <input [(ngModel)]="newContact.name" placeholder="Nome" required type="text"/>
       <input [(ngModel)]="newContact.phone" placeholder="Telefono" required type="number"/>
-      <input [(ngModel)]="newContact.extra" placeholder="informazioni aggiuntive" type="extra"/>
+      <input [(ngModel)]="newContact.extra" placeholder="informazioni aggiuntive" type="text"/>
       <button (click)="addContact()">Aggiungi Contatto</button>
       <p class="errorMessage">{{errorMessage}}</p>
     </div>
