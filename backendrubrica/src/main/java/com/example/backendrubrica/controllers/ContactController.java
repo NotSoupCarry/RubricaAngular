@@ -22,7 +22,7 @@ public class ContactController {
     }
 
     @PostMapping
-    public void addContact(Contact contact) {
+    public void addContact(@RequestBody Contact contact) {
         contactService.addContact(contact);
     }
 
