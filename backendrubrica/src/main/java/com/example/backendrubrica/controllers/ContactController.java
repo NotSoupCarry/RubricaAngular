@@ -11,9 +11,10 @@ import com.example.backendrubrica.services.ContactService;
 
 @RestController
 @RequestMapping("/api/contatti")
+@CrossOrigin("http://localhost:3000")
 @RequiredArgsConstructor
 public class ContactController {
-    private ContactService contactService;
+    private final ContactService contactService;
 
     @GetMapping
     public List<Contact> getAllContacts() {
